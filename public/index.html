@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Radar</title>
+	<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+	<link href="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css" rel="stylesheet">
+	<script src="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js"></script>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+		}
+
+		#map {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			width: 100%;
+		}
+
+		.controls {
+			z-index: 10;
+			position: absolute;
+			top: 0px;
+			left: 0px;
+		}
+
+		#slider {
+			height: 50px;
+			width: 200px;
+		}
+
+		#sliderLabel {
+			color: white;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="map"></div>
+	<div class="controls">
+		<input disabled type="range" min="0" max="23" value="23" id="slider">
+		<span id="sliderLabel"></span>
+	</div>
+	<script src="index.js"></script>
+</body>
+
+</html>
