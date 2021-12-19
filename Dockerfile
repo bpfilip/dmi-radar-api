@@ -1,7 +1,6 @@
-FROM node:17.2.0
+FROM node:17.2.0-alpine
 WORKDIR /opt/radar
-RUN apt update -y
-RUN apt install -y hdf5-tools
+RUN apk add hdf5
 COPY package.json package.json
 RUN npm i
 EXPOSE 8080
