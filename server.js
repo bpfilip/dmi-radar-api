@@ -11,6 +11,10 @@ app.listen(process.env.port || 8080, () => {
 	console.log(`Listening on port ${process.env.port || 8080}`);
 })
 
+if (!fs.existsSync("data/")) {
+	fs.mkdirSync("data");
+}
+
 app.get("/latest", async (req, res) => {
 	const date = getLatestDate();
 	if (fs.existsSync(`data/${date}.png`)) {
